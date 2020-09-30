@@ -274,6 +274,7 @@ class ArloBaseStationAccessory {
       .getService(Service.AccessoryInformation)
       .setCharacteristic(Characteristic.Model, device.getModel())
       .setCharacteristic(Characteristic.SerialNumber, device.getSerialNumber());
+      .setCharacteristic(Characteristic.FirmwareRevision, device.getFirmwareRevision());
 
     this.setupListeners();
     this.accessory.updateReachability(true);
